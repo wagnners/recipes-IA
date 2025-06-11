@@ -10,32 +10,68 @@ export async function POST(request: Request) {
     const { ingredients } = await request.json();
 
     if (!ingredients) {
-      return NextResponse.json({ error: 'Ingredientes são obrigatórios' }, { status: 400 });
+      return NextResponse.json(
+        { error: 'Ingredientes são obrigatórios' },
+        { status: 400 }
+      );
     }
 
-    // Prompt para a IA
-    const prompt = `Liste 5 receitas simples usando estes ingredientes: ${ingredients}.`;
+    const prompt = `
+Liste 5 receitas simples usando os seguintes ingredientes: ${ingredients}.
+Para cada receita, forneça:
 
-    // Chamada para OpenAI Chat Completion
+- Título em português
+- Título em inglês
+- Modo de preparo curto
+
+Responda exatamente neste formato:
+
+Título: [título em português]
+Title: [título em inglês]
+Receita: [modo de preparo curto]
+
+Não adicione introduções ou conclusões.
+`;
+
     const completion = await openai.chat.completions.create({
       model: 'gpt-3.5-turbo',
       messages: [
-        { role: 'system', content: 'Você é um assistente que sugere receitas culinárias.' },
+        {
+          role: 'system',
+          content:
+            'Você é um assistente culinário objetivo. Sempre responda no formato exato solicitado, sem explicações extras.',
+        },
         { role: 'user', content: prompt },
       ],
-      max_tokens: 300,
+      max_tokens: 1000,
       temperature: 0.7,
     });
 
-    // Resposta da IA
     const text = completion.choices[0].message?.content ?? '';
 
-    // Quebrar texto em lista, supondo que são receitas em linhas
-    const recipes = text.split('\n').filter(line => line.trim().length > 0);
+    const textClean = text.trim();
+
+    const recipes = textClean
+      .split(/\d+\.\s*/)    // Divide pelas numerações "1.", "2.", ...
+      .filter(block => block.trim().length > 0)
+      .map(block => {
+        const titlePtMatch = block.match(/Título:\s*(.+)/);
+        const titleEnMatch = block.match(/Title:\s*(.+)/);
+        const recipeMatch = block.match(/Receita:\s*([\s\S]+)/);
+
+        return {
+          title: titlePtMatch ? titlePtMatch[1].trim() : '',
+          title_en: titleEnMatch ? titleEnMatch[1].trim() : '',
+          recipe: recipeMatch ? recipeMatch[1].trim() : '',
+        };
+      });
 
     return NextResponse.json({ recipes });
   } catch (error) {
     console.error('Erro na API:', error);
-    return NextResponse.json({ error: 'Erro ao gerar receitas' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Erro ao gerar receitas' },
+      { status: 500 }
+    );
   }
 }
