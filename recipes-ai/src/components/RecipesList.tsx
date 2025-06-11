@@ -3,7 +3,7 @@ import RecipeImage from "./RecipeImage";
 type Props = {
   recipes: {
     title: string,
-    title_en : string,
+    title_en: string,
     recipe: string
   }[];
 };
@@ -15,12 +15,12 @@ export default function RecipesList({ recipes }: Props) {
     <div className="mt-6 space-y-2">
       <h2 className="text-xl font-semibold">Sugestões de receitas:</h2>
       <ul className="list-disc list-inside">
-        {recipes.map((r, index) => (
+        {recipes.map((r) => (
           <div key={r.title} className="border p-4 rounded mb-4">
-          <RecipeImage title={r.title_en || r.title} />
-          <h2 className="text-xl font-semibold">{r.title}</h2>
-          <p className="mt-2 whitespace-pre-line">{r.recipe}</p>
-        </div>
+            <RecipeImage title={r.title_en || r.title} />
+            <h2 className="text-xl font-semibold">{r.title}</h2>
+            <p className="mt-2 whitespace-pre-line">{r.recipe}</p>
+          </div>
         ))}
       </ul>
     </div>
