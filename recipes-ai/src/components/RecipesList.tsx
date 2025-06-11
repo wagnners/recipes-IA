@@ -1,11 +1,8 @@
+import { RecipeType } from "@/types/recipe";
 import RecipeImage from "./RecipeImage";
 
 type Props = {
-  recipes: {
-    title: string,
-    title_en: string,
-    recipe: string
-  }[];
+  recipes: RecipeType[];
 };
 
 export default function RecipesList({ recipes }: Props) {

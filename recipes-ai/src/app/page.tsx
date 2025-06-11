@@ -3,9 +3,11 @@
 import { useState } from 'react';
 import IngredientsForm from '@/components/IngredientsForm';
 import RecipesList from '@/components/RecipesList';
+import { RecipeType } from '@/types/recipe';
 
 export default function HomePage() {
-  const [recipes, setRecipes] = useState<string[]>([]);
+  
+  const [recipes, setRecipes] = useState<RecipeType[]>([]);
 
   return (
     <main className="max-w-xl mx-auto p-6">

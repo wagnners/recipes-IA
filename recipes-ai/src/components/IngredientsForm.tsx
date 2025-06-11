@@ -2,9 +2,10 @@
 
 import { useState } from 'react';
 import IngredientsInput from './IngredientsInput';
+import { RecipeType } from '@/types/recipe';
 
 type Props = {
-  onResult: (recipes: string[]) => void;
+  onResult: (recipes: RecipeType[]) => void;
 };
 
 export default function IngredientsForm({ onResult }: Props) {
