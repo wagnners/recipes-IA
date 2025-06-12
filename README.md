@@ -1,8 +1,9 @@
+
+<img src="./recipes-ai/public/assets/icons/logo.png" width="200" alt="Logo" />
+
 # 🍳 Cozinhou - AI-Powered Recipe Generator
 
 **Cozinhou** is a modern web application built with **Next.js** that allows users to generate quick and creative recipes based on selected ingredients. It leverages the power of **OpenAI** to create human-like cooking instructions and intelligently suggest relevant keywords to improve image search results from **Unsplash**.
-
-<img src="./recipes-ai/public/assets/icons/logo.png" width="200" alt="Logo" />
 
 # 🚀 Live Demo
 
