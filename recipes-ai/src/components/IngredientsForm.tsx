@@ -37,11 +37,7 @@ export default function IngredientsForm({ onResult }: Props) {
         initialTags={ingredients}
       />
       <div className="flex">
-        {ingredients.length > 0 && (
-          <p className="text-black text-xs font-extralight">
-            Ingredientes: {ingredients.length}
-          </p>
-        )}
+
         <button
           type="submit"
           className="bg-[#bd0101] text-white px-4 py-2 rounded ml-auto"
