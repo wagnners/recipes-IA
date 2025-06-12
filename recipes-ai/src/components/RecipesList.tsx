@@ -14,7 +14,7 @@ export default function RecipesList({ recipes }: Props) {
       <ul className="list-disc list-inside">
         {recipes.map((r) => (
           <div key={r.title} className="border p-4 rounded mb-4">
-            <RecipeImage title={r.title_en || r.title} />
+            <RecipeImage title={r.keywords} />
             <h2 className="text-xl font-semibold">{r.title}</h2>
             <p className="mt-2 whitespace-pre-line">{r.recipe}</p>
           </div>

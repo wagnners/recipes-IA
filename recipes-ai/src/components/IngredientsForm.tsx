@@ -31,18 +31,25 @@ export default function IngredientsForm({ onResult }: Props) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-2">
       <IngredientsInput
         onChange={(newTags) => setIngredients(newTags)}
         initialTags={ingredients}
       />
-      <button
-        type="submit"
-        className="bg-blue-600 text-white px-4 py-2 rounded"
-        disabled={loading}
-      >
-        {loading ? 'Buscando receitas...' : 'Buscar receitas'}
-      </button>
+      <div className="flex">
+        {ingredients.length > 0 && (
+          <p className="text-black text-xs font-extralight">
+            Ingredientes: {ingredients.length}
+          </p>
+        )}
+        <button
+          type="submit"
+          className="bg-blue-600 text-white px-4 py-2 rounded ml-auto"
+          disabled={loading}
+        >
+          {loading ? 'Buscando receitas...' : 'Buscar receitas'}
+        </button>
+      </div>
     </form>
   );
 }

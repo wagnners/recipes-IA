@@ -38,11 +38,11 @@ export default function IngredientsInput({ onChange, initialTags = [] }: Ingredi
   };
 
   return (
-    <div className="flex flex-wrap gap-2 border rounded p-2">
+    <div className="flex flex-wrap gap-2 border rounded p-2 bg-white w-full">
       {tags.map((tag, index) => (
         <div
           key={index}
-          className="flex items-center bg-blue-500 text-white rounded px-2 py-1 text-sm"
+          className="flex items-center bg-white text-black rounded px-2 py-1 text-sm p-2 border border-blue-100"
         >
           {tag}
           <button
@@ -55,9 +55,9 @@ export default function IngredientsInput({ onChange, initialTags = [] }: Ingredi
         </div>
       ))}
       <input
-        className="flex-grow min-w-[100px] outline-none"
+        className="flex-grow min-w-[100px] outline-none text-black"
         type="text"
-        placeholder="Digite ingrediente e aperte Enter"
+        placeholder="Digite ingrediente e aperte enter"
         value={inputValue}
         onChange={(e: ChangeEvent<HTMLInputElement>) => setInputValue(e.target.value)}
         onKeyDown={onKeyDown}

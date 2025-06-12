@@ -1,5 +1,6 @@
 export interface RecipeType {
     title: string,
     title_en: string,
-    recipe: string
+    recipe: string,
+    keywords: string
 }
