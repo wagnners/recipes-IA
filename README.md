@@ -2,7 +2,7 @@
 
 **Cozinhou** is a modern web application built with **Next.js** that allows users to generate quick and creative recipes based on selected ingredients. It leverages the power of **OpenAI** to create human-like cooking instructions and intelligently suggest relevant keywords to improve image search results from **Unsplash**.
 
-![Logo](./assets/icons/logo.png)
+![Logo](./recipes-ai/assets/icons/logo.png)
 ---
 
 ## ⚡ Features
