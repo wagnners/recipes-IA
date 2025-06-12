@@ -44,7 +44,7 @@ export default function IngredientsForm({ onResult }: Props) {
         )}
         <button
           type="submit"
-          className="bg-blue-600 text-white px-4 py-2 rounded ml-auto"
+          className="bg-[#bd0101] text-white px-4 py-2 rounded ml-auto"
           disabled={loading}
         >
           {loading ? 'Buscando receitas...' : 'Buscar receitas'}
