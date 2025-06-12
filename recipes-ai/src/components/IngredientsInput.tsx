@@ -42,7 +42,7 @@ export default function IngredientsInput({ onChange, initialTags = [] }: Ingredi
       {tags.map((tag, index) => (
         <div
           key={index}
-          className="flex items-center bg-white text-black rounded px-2 py-1 text-sm p-2 border border-blue-100"
+          className="flex items-center bg-[#d2b97f] text-white rounded px-2 py-1 text-sm p-2 shadow-md shadow-black/20"
         >
           {tag}
           <button
