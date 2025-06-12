@@ -29,7 +29,7 @@ export default function HomePage() {
           pointer-events: none
         }
       `}</style>
-      <main className="min-w-full min-h-screen flex items-center md:justify-center textura-suave py-4">
+      <main className="min-w-full min-h-screen flex items-start md:items-center lg:items-center xl:items-center justify-center textura-suave py-4 ">
         <div className="max-w-xl w-full p-6 bg-[#b2d2ff] rounded-lg shadow-md shadow-black/20 mx-4 md:mx-0">
           <div className="min-w-full mb-6">
             <img src="/assets/icons/logo.svg" className="w-[200px] m-auto" alt="" />
