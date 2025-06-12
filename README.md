@@ -4,6 +4,10 @@
 
 <img src="./recipes-ai/public/assets/icons/logo.png" width="200" alt="Logo" />
 
+# 🚀 Live Demo
+
+Check out the project live here: [https://recipes-ia-git-main-wagner-luzs-projects.vercel.app](https://recipes-ia-git-main-wagner-luzs-projects.vercel.app)
+
 ## ⚡ Features
 
 - 🧠 Generate unique recipes using AI with just a list of ingredients
