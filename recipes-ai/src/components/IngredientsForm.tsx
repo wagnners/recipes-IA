@@ -31,7 +31,7 @@ export default function IngredientsForm({ onResult }: Props) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-2">
+    <form onSubmit={handleSubmit} className="space-y-4">
       <IngredientsInput
         onChange={(newTags) => setIngredients(newTags)}
         initialTags={ingredients}
