@@ -63,7 +63,6 @@ All this happens in a single API call, improving speed and reducing complexity.
 - Unsplash API (image search)
 - Tailwind CSS (utility-first styling)
 - React Hook Form (form handling)
-- Zustand (state management)
 - Vercel (deployment)
 - ESLint + Prettier (code formatting and linting)
 
