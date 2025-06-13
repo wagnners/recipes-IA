@@ -31,13 +31,12 @@ export default function IngredientsForm({ onResult }: Props) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-6 md:space-y-4">
       <IngredientsInput
         onChange={(newTags) => setIngredients(newTags)}
         initialTags={ingredients}
       />
       <div className="flex">
-
         <button
           type="submit"
           className="bg-[#b22a28] text-white px-4 py-2 rounded ml-auto mb-2"
