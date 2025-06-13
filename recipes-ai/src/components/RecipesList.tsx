@@ -13,7 +13,7 @@ export default function RecipesList({ recipes }: Props) {
       <div className="flex items-center gap-2 mb-4 border-b-1 border-[#d2b97f] pb-1 mb-6">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 text-[#bd0101]"
+          className="w-6 h-6 text-[#b22a28]"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -25,7 +25,7 @@ export default function RecipesList({ recipes }: Props) {
             d="M4 6h16M4 12h16M4 18h16"
           />
         </svg>
-        <h2 className="text-md font-semibold text-[#bd0101]">Sugestões de receitas:</h2>
+        <h2 className="text-md font-semibold text-[#b22a28]">Sugestões de receitas:</h2>
       </div>
       {recipes.map((r) => (
         <div
@@ -34,7 +34,7 @@ export default function RecipesList({ recipes }: Props) {
         >
           <RecipeImage title={r.keywords} />
           <div className="p-4">
-            <h3 className="text-xl font-semibold text-[#bd0101] mb-2">{r.title}</h3>
+            <h3 className="text-xl font-semibold text-[#b22a28] mb-2">{r.title}</h3>
             <p className="text-sm whitespace-pre-line text-neutral-700">{r.recipe}</p>
           </div>
         </div>
