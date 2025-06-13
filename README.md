@@ -1,5 +1,5 @@
 
-<img src="./recipes-ai/public/assets/icons/logo.png" width="200" alt="Logo" />
+<img src="./recipes-ai/public/assets/icons/logo.svg" width="200" alt="Logo" />
 
 # 🍳 Cozinhou - AI-Powered Recipe Generator
 
