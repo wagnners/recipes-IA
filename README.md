@@ -8,7 +8,7 @@
 
 # 🚀 Live Demo
 
-Check out the project live [aqui.](recipes-ia.vercel.app)
+Check out the project live [here.](recipes-ia.vercel.app)
 
 ## ⚡ Features
 
