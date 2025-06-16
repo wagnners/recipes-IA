@@ -11,7 +11,6 @@ export default function IngredientsInput({ onChange, initialTags = [] }: Ingredi
   const [tags, setTags] = useState<string[]>(initialTags);
   const [inputValue, setInputValue] = useState('');
 
-  // Adiciona tag nova, evitando duplicatas e string vazia
   const addTag = (tag: string) => {
     const trimmed = tag.trim();
     if (trimmed && !tags.includes(trimmed)) {
@@ -21,14 +20,12 @@ export default function IngredientsInput({ onChange, initialTags = [] }: Ingredi
     }
   };
 
-  // Remove tag pelo índice
   const removeTag = (index: number) => {
     const newTags = tags.filter((_, i) => i !== index);
     setTags(newTags);
     onChange?.(newTags);
   };
 
-  // Ao apertar Enter, adiciona tag
   const onKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       e.preventDefault();
@@ -37,13 +34,16 @@ export default function IngredientsInput({ onChange, initialTags = [] }: Ingredi
     }
   };
 
+
+
   return (
-    <div className="flex flex-wrap gap-2 border rounded p-2 bg-white w-full">
+    <div className="flex flex-wrap gap-2 border rounded-lg p-2 bg-white w-full">
       {tags.map((tag, index) => (
         <div
           key={index}
           className="flex items-center bg-[#d2b97f] text-white rounded px-2 py-1 text-sm p-2 shadow-md shadow-black/20"
         >
+
           {tag}
           <button
             type="button"
