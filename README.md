@@ -8,7 +8,7 @@
 
 # 🚀 Live Demo
 
-Check out the project live here: [https://recipes-ia-git-main-wagner-luzs-projects.vercel.app](https://recipes-ia-git-main-wagner-luzs-projects.vercel.app)
+Check out the project live [aqui.](recipes-ia.vercel.app)
 
 ## ⚡ Features
 
