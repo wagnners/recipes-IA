@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+<p align="center">
+   <img src="./recipes-ai/public/assets/icons/logo.svg" width="200" alt="Logo" />
+</p>
+# 🍳 Cozinhou - AI-Powered Recipe Generator
 
-First, run the development server:
+**Cozinhou** is a modern web application built with **Next.js** that allows users to generate quick and creative recipes based on selected ingredients. It leverages the power of **OpenAI** to create human-like cooking instructions and intelligently suggest relevant keywords to improve image search results from **Unsplash**.
 
+# 🚀 Live Demo
+
+Check out the project live here: [https://recipes-ia-git-main-wagner-luzs-projects.vercel.app](https://recipes-ia-git-main-wagner-luzs-projects.vercel.app)
+
+## ⚡ Features
+
+- 🧠 Generate unique recipes using AI with just a list of ingredients
+- 🌍 Titles in both Portuguese and English
+- 📝 AI-generated short cooking instructions
+- 🖼️ Smart keyword generation for Unsplash image search
+- 💡 Clean and responsive UI with Tailwind CSS
+- 🧩 Component-based architecture
+
+---
+
+## 🚀 Getting Started
+
+Clone the repository:
+
+```bashh
+git clone https://github.com/wagnners/recipes-IA.git
+cd recipes-ai
+```
+### Install dependencies
 ```bash
-npm run dev
+npm install
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 🧠 Powered by OpenAI
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project uses OpenAI's GPT-3.5-turbo model to:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Generate realistic recipes from user-provided ingredients
+- Translate recipe titles to English
+- Suggest optimized image search keywords to match recipe context
 
-## Learn More
+All this happens in a single API call, improving speed and reducing complexity.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 🖼️ Unsplash Integration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Uses the Unsplash API to fetch visually appealing food-related images.
+- AI-generated keywords help filter more accurate and relevant images.
+- If the title includes animal names like “chicken” or “rabbit”, additional terms like "cooked", "dish", or "meal" are appended to avoid raw animal images.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# 🛠️ Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js (React framework)
+- TypeScript
+- OpenAI API (chat completions)
+- Unsplash API (image search)
+- Tailwind CSS (utility-first styling)
+- React Hook Form (form handling)
+- Vercel (deployment)
+- ESLint + Prettier (code formatting and linting)
+
+---
+
+# 📁 Project Structure
+
+```bash
+/components       → Reusable UI components  
+/app/api          → API routes (OpenAI + Unsplash logic)  
+/app              → Pages and layout  
+/lib              → Utility functions and helpers  
+/public/assets    → Static assets like logo  
+```
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+# 🙌 Acknowledgments
+
+- OpenAI
+- Unsplash
+- Next.js
+- Tailwind CSS
+
+Made with ❤️ by Wagner Luz
+
