@@ -1,6 +1,6 @@
 
 <p align="center">
-   <img src="./recipes-ai/public/assets/icons/logo.svg" width="200" alt="Logo" />
+   <img src="./public/assets/icons/logo.svg" width="200" alt="Logo" />
 </p>
 # 🍳 Cozinhou - AI-Powered Recipe Generator
 
